@@ -24,4 +24,4 @@ app.get('/',(req,res)=>{
     res.render(process.cwd()+'/frontend/views/html/index.ejs');
 });
 
-app.listen(process.env.PORT || '2000',()=>console.log('connection established'));
+app.listen(process.env.PORT || '2000',process.env.HOST,()=>console.log('connection established'));
