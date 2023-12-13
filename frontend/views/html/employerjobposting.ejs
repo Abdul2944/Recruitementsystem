@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Firm</title>
+    <link href="../css/employerpoststyle.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <div class="topbar">
+        <img src="../Images/logo1.png" class="logo">
+        <div class="menu">
+            <h3>Hello! <span> <%=employername%> </span></h3>
+            <div class="employeebutton"><a href="/joining/logout">Log out</a></div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="subnav">
+    <span>Jobs</span>
+    <span>Companies</span>
+    <span>Articles</span>
+    <span>About Us</span>
+       </div>
+    </div>
+    <div class="boxcenter">
+      <div class="subboxcenter">
+         <div class="topimage"><img src="../Images/employerhead.png"></div>
+         <!-- <div class="title">Many Companies are looking for perfect candidate for their company venture</div> -->
+         <div class="subtitle">You haven't posted a job before, so you'll need to create an employer account.</div>
+      </div>
+      <form class="postinformation" action="/joining/jobpostform" method="post">
+        <div class="inputbox">
+           <label for="jobtitle">Job Title *</label>
+            <input type="text" name="jobtitle"/>
+        </div>
+        <div class="inputbox">
+            <label for="jobdescription">Job Description *</label>
+             <input type="text" name="jobdescription"/>
+         </div>
+         <div class="inputbox">
+            <label for="companyname">Company Name *</label>
+             <input type="text" name="companyname"/>
+         </div>
+         <div class="inputbox">
+            <label for="location">Location *</label>
+             <input type="text" name="location"/>
+         </div>
+         <div class="inputbox">
+            <label for="jobtype">Job Type *</label>
+             <input type="text" name="jobtype"/>
+         </div>
+         <div class="inputbox">
+            <label for="industryname">Industry Name *</label>
+             <input type="text" name="industryname"/>
+         </div>
+         <div class="inputbox">
+            <label for="skills">Skills And Qualification *</label>
+             <input type="text" name="skills"/>
+         </div>
+         <div class="inputbox">
+            <label for="contactinformation">Contact Information *</label>
+             <input type="text" name="contactinformation"/>
+         </div>
+         <div class="inputbox">
+            <label for="experiencelevel">Experience Level *</label>
+             <select name="experiencelevel" class="experiencelevel">
+                <option>0 to 1</option>
+                <option>1 to 2</option>
+                <option>2 to 3</option>
+                <option>3 to 4</option>
+                <option>4 to 5</option>
+                </select>
+         </div>
+         <div class="continuebutton">
+            <button type="submit">Continue</button>
+        </div>
+     </form>
+    </div>
+    <div class="footer">
+        <div class="imagemenu">
+        <img src="../Images/logo1.png" class="logo">
+        <div class="socialicons">
+            <img src="../Images/facebook.png" width="30" height="30">
+            <img src="../Images/instagram.png" width="30" height="30">
+            <img src="../Images/twitter.png" width="30" height="30">
+            <img src="../Images/youtube.png" width="30" height="30">
+        </div>
+        </div>
+        <div class="footermenu">
+            <div class="submenu">
+                <h1>About</h1>
+                <h5>Careers</h5>
+                <h5>Staff</h5>
+                <h5>Description</h5>
+                <h5>Content</h5>
+            </div>
+            <div class="submenu">
+                <h1>Resources</h1>
+                <h5>Customer</h5>
+                <h5>Support</h5>
+                <h5>Report</h5>
+                <h5>Tech</h5>
+            </div>
+            <div class="submenu">
+                <h1>Jobs</h1>
+                <h5>Engineering</h5>
+                <h5>Software</h5>
+                <h5>Warehouse</h5>
+                <h5>Technical</h5>
+            </div>
+        </div>
+       </div>
+   </div>
+</body>
+</html>

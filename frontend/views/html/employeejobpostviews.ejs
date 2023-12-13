@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Firm</title>
+    <link href="../css/employeejobpostviewstyle.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <div class="topbar">
+        <img src="../Images/logo1.png" class="logo">
+        <div class="menu">
+            <h3>Hello! <span> <%=employeename%> </span></h3>
+            <div class="employeebutton"><a href="/joining/logout" style="color: aliceblue;text-decoration: none;">Log out</a></div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="subnav">
+    <span><a href="/joining/" style="color: black;text-decoration: none;">Home</a></span>
+    <span><a href="/joining/jobpostview" style="color: black;text-decoration: none;">Companies</a></span>
+    <span><a href="/joining/jobpostview" style="color: black;text-decoration: none;">Articles</a></span>
+    <span><a href="/joining/jobpostview" style="color: black;text-decoration: none;">About Us</a></span>
+       </div>
+    </div>
+    <div class="navigation">
+        <div class="searchbar">
+    <input type="text" name="search" placeholder="Town, City, Country">
+    <button type="button" name="searchbutton">Search</button>
+       </div>
+    </div>
+    <div class="boxcenter">
+     <div class="categoriesbox">
+      <div class="subcatgory"><h3>Location
+        <div class="expandedoptions">
+            <h5>Dublin</h5>
+            <h5>Cork</h5>
+            <h5>Galway</h5>
+            <h5>Belfast</h5>
+            <h5>Limbrick</h5>
+        </div>
+      </h3>
+        <img src="../Images/downarrow.png" alt="" width="20" height="20" class="expandbutton">
+      </div> 
+      <div class="subcatgory"><h3>Salary
+        <div class="expandedoptions">
+            <h5>Internship</h5>
+            <h5>Part Time</h5>
+            <h5>Full Time</h5>
+            <h5>Contract</h5>
+            <h5>Temperory</h5>
+        </div>
+      </h3>
+        <img src="../Images/downarrow.png" alt="" width="20" height="20"  class="expandbutton">
+      </div>
+      <div class="subcatgory"><h3 class="dateposted">Date Posted
+        <div class="expandedoptions">
+            <h5>Last 24 hours</h5>
+            <h5>Last 3 days</h5>
+            <h5>Last 7 days</h5>
+        </div>
+      </h3>
+        <img src="../Images/downarrow.png" alt="" width="20" height="20" class="expandbutton">
+        
+      </div>
+      <div class="subcatgory"><h3 class="jobtypes">Job types
+        
+        <div class="expandedoptions">
+            <h5>Internship</h5>
+            <h5>Part Time</h5>
+            <h5>Full Time</h5>
+            <h5>Contract</h5>
+            <h5>Temperory</h5>
+        </div>
+    </h3>
+    <img src="../Images/downarrow.png" alt="" width="20" height="20" class="expandbutton">
+      </div>
+      </div>
+     <div class="jobpostbox">
+        <h3>Internship Jobs</h3>
+        <%for(var i in data){%> 
+        <div class="subjobpost">
+            <div class="subbodyjob">
+            <div class="subpostcategory">
+                <h4>Job Title</h4>
+                <p><%=data[i].jobtitle%></p>
+            </div>
+            <div class="subpostcategory">
+                <h4>Job Description</h4>
+                <p><%=data[i].jobdescription%></p>
+            </div>
+            <div class="subpostcategory">
+                <h4>Company</h4>
+                <p><%=data[i].companyname%></p>
+            </div>
+            <div class="subpostcategory">
+                <h4>Salary Range</h4>
+                <p><%=data[i].location%></p>
+            </div>
+            <div class="subpostcategory">
+                <h4>Job Type</h4>
+                <p><%=data[i].jobtype%></p>
+            </div>
+            <div class="subpostcategory">
+                <h4>Skills required</h4>
+                <p><%=data[i].skillsandqualificationrequired%></p>
+            </div>
+            <div class="subpostcategory">
+                <h4>Location</h4>
+                <p><%=data[i].location%></p>
+            </div>
+            <div class="subpostcategory">
+                <h4>Contact Number</h4>
+                <p><%=data[i].contactinformation%></p>
+            </div>
+            <div class="subpostcategoryDate">
+                <h4>Date Posted: &nbsp;</h4>
+                <p><%=data[i].dataposted%></p>
+            </div>
+        </div>
+        </div>  
+        <%}%>  
+     </div> 
+    </div>
+    <div class="footer">
+        <div class="imagemenu">
+        <img src="../Images/logo1.png" class="logo">
+        <div class="socialicons">
+            <img src="../Images/facebook.png" width="30" height="30">
+            <img src="../Images/instagram.png" width="30" height="30">
+            <img src="../Images/twitter.png" width="30" height="30">
+            <img src="../Images/youtube.png" width="30" height="30">
+        </div>
+        </div>
+        <div class="footermenu">
+            <div class="submenu">
+                <h1>About</h1>
+                <h5>Careers</h5>
+                <h5>Staff</h5>
+                <h5>Description</h5>
+                <h5>Content</h5>
+            </div>
+            <div class="submenu">
+                <h1>Resources</h1>
+                <h5>Customer</h5>
+                <h5>Support</h5>
+                <h5>Report</h5>
+                <h5>Tech</h5>
+            </div>
+            <div class="submenu">
+                <h1>Jobs</h1>
+                <h5>Engineering</h5>
+                <h5>Software</h5>
+                <h5>Warehouse</h5>
+                <h5>Technical</h5>
+            </div>
+        </div>
+       </div>
+   </div>
+   <script>
+
+  var subcategory=document.querySelectorAll('.subcatgory');  
+   
+ var datepostedexpandedoptions=subcategory.item(2).querySelector('.expandedoptions');
+ var jobtypeexpandedoptions=subcategory.item(3).querySelector('.expandedoptions');
+ var datepostedexpandbutton=subcategory.item(2).querySelector('.expandbutton');
+ var jobtypeexpandbutton=subcategory.item(3).querySelector('.expandbutton');
+
+ 
+ var locationexpandedoptions=subcategory.item(0).querySelector('.expandedoptions');
+ var locationexpandbutton=subcategory.item(0).querySelector('.expandbutton');
+
+ EventName(datepostedexpandedoptions,datepostedexpandbutton);
+ EventName(jobtypeexpandedoptions,jobtypeexpandbutton);
+ EventName(locationexpandedoptions,locationexpandbutton);
+
+    function EventName(expandedoption,expandbutton)
+    {
+        expandbutton.addEventListener('click',(e)=>{
+            var computedStyle=window.getComputedStyle(expandedoption).display;
+            computedStyle=='none'?expandbutton.style.transform='scaleY(1)': computedStyle=='block'?expandbutton.style.transform='scaleY(-1)':expandbutton.style.transform='scaleY(1)';
+       
+            computedStyle=='block'?expandedoption.style.display='none':expandedoption.style.display='block';
+           
+        });
+    } 
+   </script>
+</body>
+</html>

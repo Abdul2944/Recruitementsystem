@@ -1,0 +1,295 @@
+*
+{
+    margin:0;
+    padding:0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container
+{
+    width: 100%;
+    height:100%;
+    position: relative;
+}
+.topbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100vw;
+    height:15vh;  
+    background-color: #070f4e;
+}
+.navigation
+{
+    background-color: #070f4e;
+}
+
+.searchbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right:30px;
+    
+}
+.searchbar input
+{
+    border-radius: 3px;
+    width:500px;
+    max-width:100%;
+    height:15px;
+    border:2px solid white;
+    margin-top:5px;
+    padding: 10px;
+    font-size:18px;
+}
+.searchbar button
+{
+    width:100px;
+    height:40px;
+    background-color:#333d90;
+    border-radius:5px;
+    margin-left:20px;
+    margin-top:5px;
+    font-size:20px;
+    color: aliceblue;
+}
+.logo
+{
+    transform: scale(0.25);
+    margin-top: 10px;
+}
+.topbar .menu
+{
+    display: flex;
+    font-weight: bold;
+    color: aliceblue;
+    margin-right:200px;
+    align-items: center;
+    justify-content: center;
+    font-size:0.8vw;
+    right:0;
+    margin-top:0px;
+}
+.topbar .menu .employeebutton
+{
+    background-color:  #333d90;
+    width:140px;
+    height:45px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    margin-right:10px;
+}
+.topbar .menu .employeebutton:hover
+{
+    background-color:#6571cb;
+}
+.topbar .menu h2
+{
+    margin-right:10px;
+}
+.navigation
+{
+    width:100%;
+    height:50px;
+    background-color: aliceblue;
+    margin-top: 0px;
+}
+.container .navigation:nth-child(3)
+{
+    background-color: #c3cfff;
+}
+
+.navigation .subnav
+{
+    margin-left:150px;
+    height: 95%;
+    display:flex;
+    background-color:aliceblue;
+}
+.navigation span
+{
+    width:150px;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:18px;
+}
+
+.navigation span:hover
+{
+    cursor: pointer;
+    border-bottom:3px solid black;
+}
+.boxcenter
+{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width:100%;
+    height:100%;
+    margin-top:30px;
+    cursor: pointer;
+}
+.boxcenter .categoriesbox
+{
+    width:25%;
+    max-width:100%;
+    height: auto;
+    margin-left:10px;
+}
+.boxcenter .jobpostbox
+{
+    width:70%;
+    max-width:100%;
+    height: auto;
+    margin-right:50px;
+    margin-left:50px;
+}
+.boxcenter .subjobpost:hover
+{
+    border: 3px solid #333d90;
+}
+.categoriesbox .subcatgory
+{
+ width:280px;
+ max-width:100%;
+ height:auto;
+ background-color: aliceblue;
+ color:black;
+ margin-bottom:15px;
+ border-radius:3px;
+ padding-top:10px;
+ font-size:16px;
+ font-weight: bold;
+ margin-left:40px;
+ border: 1px solid black;
+ display:flex;
+ justify-content:space-around;
+ padding-bottom:10px;
+}
+.categoriesbox .subcatgory .expandedoptions
+{
+    margin-top:20px;
+    h5
+    {
+     margin-top:10px;
+     font-weight: 500;
+    }
+    display:none;
+}
+.categoriesbox .subcatgory h3
+{
+    width:120px;
+    height: auto;
+    margin-left:10px;
+}
+.categoriesbox .subcatgory img
+{
+    margin-right:10px;
+}
+.container .jobpostbox
+{
+    width:100%;
+    height: 100%;
+}
+.jobpostbox .subjobpost
+{
+    background-color: aliceblue;
+    border:1px solid grey;
+    border-radius:3px;
+    height:140px;
+    width:80%;
+    max-width:100%;
+    margin-top:20px;
+    padding:20px;
+  position: relative;
+}
+ .jobpostbox .subjobpost .subbodyjob .subpostcategory p
+{
+    width: 70%;
+}
+ .jobpostbox .subjobpost .subbodyjob
+{
+    height:140px;
+    width:100%;
+    overflow: auto;
+}
+ .jobpostbox .subjobpost .subpostcategory
+{
+    margin-bottom:10px;
+}
+.jobpostbox .subjobpost .subpostcategoryDate
+{
+   
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    right:0;
+    bottom:0;
+    margin-right:30px;
+}
+.subcatgory .expandbutton
+{
+    transform:scaleY(-1);
+}
+.footer
+{
+    background-color: #070f4e;
+    width: 100%;
+    height:250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    position:absolute;
+    bottom:-500px;
+}
+.footer .footermenu
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right:300px;
+}
+.footer .footermenu .submenu
+{
+ margin-left: 30px;
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ margin-right:50px;
+}
+.footer .footermenu .submenu h5
+{
+ margin-top: 20px;
+}
+.imagemenu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imagemenu .socialicons
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:10px;
+    margin-top:-70px;
+}
+.imagemenu .socialicons img
+{
+    margin-right: 10px;
+}
+.menu span
+{
+    margin-right:30px;
+}
