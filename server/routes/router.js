@@ -1,6 +1,7 @@
 const express=require('express');
 const router=express.Router();
-
+const path = require('path');
+const dir = path.join(__dirname, '../../../PROJECT/frontend');
 //use to create a token which consist of id,username and password
 const jwt=require('jsonwebtoken');
 
@@ -15,7 +16,7 @@ router.use(express.json());
 
 
 router.get('/employerRegister',(req,res)=>{{
-    res.render(process.cwd()+'/frontend/views/html/employerregister.ejs',{option1:'Employer',option2:'Joinee'});
+    res.render(dir+'/views/html/employerregister.ejs',{option1:'Employer',option2:'Joinee'});
 }});
 
 router.post('/employerRegister',async (req,res)=>{{
@@ -38,18 +39,19 @@ router.post('/employerRegister',async (req,res)=>{{
                 return;
             }
             const user=new employmentmodel(body);
+            
             user.save().then(e=>res.json('Registered successfully')).catch(e=>res.json('Already registered! Please Login!'));
     }
 }});
 
 //route to login for employee register
 router.get('/employeeRegister',(req,res)=>{{
-    res.render(process.cwd()+'/frontend/views/html/employerregister.ejs',{option1:'Joinee',option2:'Employer'});
+    res.render(dir+'/views/html/employerregister.ejs',{option1:'Joinee',option2:'Employer'});
 }});
 
 //route to login for employee
 router.get('/employeelogin',(req,res)=>{{
-    res.render(process.cwd()+'/frontend/views/html/employeelogin.ejs');
+    res.render(dir+'/views/html/employeelogin.ejs');
 }});
 
 
@@ -127,7 +129,7 @@ router.get('/profile',checkforcookie,(req,res)=>{
 });
 //route to form for employers to post job
 router.get('/jobpostform',(req,res)=> {
-    res.render(process.cwd()+'/frontend/views/html/employerjobposting.ejs',{employername:username});
+    res.render(dir+'/views/html/employerjobposting.ejs',{employername:username});
 });
 
 router.post('/jobpostform',checkforcookie,async (req,res)=> {
@@ -149,7 +151,7 @@ router.post('/jobpostform',checkforcookie,async (req,res)=> {
         });
         if(jobpost)
         {
-            res.render(process.cwd()+'/frontend/views/html/jobpostingmessage.ejs');
+            res.render(dir+'/frontend/views/html/jobpostingmessage.ejs');
         }
         else
         {
@@ -163,7 +165,7 @@ router.post('/jobpostform',checkforcookie,async (req,res)=> {
 //all job post view page route
 router.get('/jobpostview',checkforcookie,async (req,res)=> {
     const allposts=await employeejobmodel.find({});
-    res.render(process.cwd()+'/frontend/views/html/employeejobpostviews.ejs',{employeename:username,data:allposts});
+    res.render(dir+'/views/html/employeejobpostviews.ejs',{employeename:username,data:allposts});
 });
 
 router.get('/logout',(req,res)=>{
