@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGO_URI, { dbName: 'RecruitmentDB' })
   .then(() => console.log('Database Connected!'))
   .catch(err => console.error('Database Connection Error:', err));
 
-const dir = path.join(__dirname, '../../PROJECT/frontend');
+const dir = path.join(__dirname, '../frontend');
 console.log(dir.toString());
 
 app.use(express.static(path.join(dir, '/views')));

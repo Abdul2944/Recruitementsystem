@@ -1,7 +1,7 @@
 const express=require('express');
 const router=express.Router();
 const path = require('path');
-const dir = path.join(__dirname, '../../../PROJECT/frontend');
+const dir = path.join(__dirname, '../../frontend');
 //use to create a token which consist of id,username and password
 const jwt=require('jsonwebtoken');
 
@@ -39,7 +39,7 @@ router.post('/employerRegister',async (req,res)=>{{
                 return;
             }
             const user=new employmentmodel(body);
-            
+
             user.save().then(e=>res.json('Registered successfully')).catch(e=>res.json('Already registered! Please Login!'));
     }
 }});
